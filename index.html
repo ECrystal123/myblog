@@ -16,6 +16,56 @@
       font-size: 1.2em;
       color: rgba(142, 180, 142, 1);
     }
+            .article-item {
+            border-bottom: 1px solid #dee2e6;
+            padding: 20px 0;
+        }
+        .article-item:last-child {
+            border-bottom: none;
+        }
+        .article-title {
+            font-weight: 500;
+            color: #212529;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-title:hover {
+            color: #0d6efd;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        .article-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .article-img {
+            max-width: 100%;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .article-img:hover {
+            transform: scale(1.03);
+        }
+        .section-header {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .article-excerpt {
+            font-size: 0.95rem;
+            color: #495057;
+            margin-top: 8px;
+        }
   </style>
 </head>
 
@@ -53,14 +103,20 @@
   </div>
   <h1>文章</h1>
   <hr>
-    <div class="nav-scroller py-2 mb-1">
-    <nav class="nav d-flex justify-content-between">
-  <div class="post1-2504042312">
-    <i class="bi bi-link"></i><a href="/myblog/post/2504042312.html">Test</a><img src="/myblog/data/noimage.png" width=100 />
-    <p>post time:2025/4/4 23:40(UTC+8)</p>
-  </div>
-    </nav>
-  </div>
+  <div class="row align-items-center article-item">
+            <div class="col-md-7">
+                <a href="/myblog/post/2504042340.html" class="article-title">Test</a>
+                <div class="article-meta">2025/4/4 23:40(UTC+8)</div>
+                <p class="article-excerpt">测试</p>
+            </div>
+            <div class="col-md-5">
+                <div class="article-img-container">
+                    <img src="/myblog/data/noimage.png" 
+                         alt="Bootstrap 5" 
+                         class="article-img">
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
